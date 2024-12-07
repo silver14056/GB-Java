@@ -3,17 +3,21 @@ package seminar1;
 class Answer_4 {
     // Функция для нахождения максимума из двух чисел
     public int findMaxOfTwo(int a, int b) {
-        return 0;
+        if (a >= b) {
+            return a;
+        } else {
+            return b;
+        }
     }
     // Функция для нахождения максимума из трех чисел
     public int findMaxOfThree(int a, int b, int c) {
-        return 0;
+        return findMaxOfTwo(findMaxOfTwo(a, b), c);
     }
 }
 // Не удаляйте этот класс - он нужен для вывода результатов на экран и проверки
 public class dz4 {
     public static void main(String[] args) {
-        int a = 5, b = 10, c = 3;
+        int a = 10, b = 10, c = 3;
         if (args.length == 3) {
             a = Integer.parseInt(args[0]);
             b = Integer.parseInt(args[1]);

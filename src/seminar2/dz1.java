@@ -11,10 +11,8 @@ class URLBuilder {
                 url.append(splitParams[i]).append("&");
             }
         }
-        System.out.println(url);
         url.deleteCharAt(url.length() - 1);
-        System.out.println(url);
-        return "";
+        return url.toString();
     }
 }
 // Не удаляйте этот класс - он нужен для вывода результатов на экран и проверки
